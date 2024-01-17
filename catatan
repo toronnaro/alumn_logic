@@ -1,0 +1,13 @@
+Struktur Tabel ALumni
+
+-   id
+-   nama
+-   jenis kelamin
+-   tempat tanggal lahir
+-   nis
+-   nisn
+-   jurusan
+-   tangggl masuk
+-   tanggal keluar
+-   status
+-   nomor telepon
