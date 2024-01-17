@@ -14,7 +14,7 @@ class SiswaController extends Controller
     //index berfungsi untuk menampilkan semua data
     public function index()
     {
-        return view('master.home', [
+        return view('master.data', [
             'siswas' => Siswa::all()
         ]);
     }
