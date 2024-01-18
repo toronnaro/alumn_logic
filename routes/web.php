@@ -19,3 +19,7 @@ Route::resource('siswa', SiswaController::class);
 Route::get('/', function () {
     return view('master.home');
 });
+
+Route::get('/login', function () {
+    return view('login.login');
+});

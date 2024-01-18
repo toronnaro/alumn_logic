@@ -1,21 +1,15 @@
 @extends('template.main')
 
 @section('container')
-    <h1 class="text-center">Form Tambah Data</h1>
+    <h1 class="text-center">Add Data Form</h1>
 
     <div class="container">
-        <form action="{{ route('siswa.store') }}" method="POST" class="col-lg-8">
+        <form action="{{ route('siswa.update', $siswa->id) }}" method="POST" class="col-lg-8">
             @csrf
+            @method('PUT')
             <div class="mb-3">
                 <label for="nama" class="form-label">Nama</label>
-                <input type="text" class="form-control @error('nama') is-invalid
-                @enderror" name="nama"
-                    required>
-                @error('nama')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
-                @enderror
+                <input type="text" class="form-control" name="nama" required value="{{ $siswa->nama }}">
             </div>
             <div class="mb-3">
                 <label for="gender">Gender</label>
@@ -26,18 +20,18 @@
             </div>
             <div class="mb-3">
                 <label for="birthplace">Tgl Lahir</label>
-                <input type="date" name="birthplace" required>
+                <input type="date" name="birthplace" required value="{{ $siswa->birthplace }}">
             </div>
             <div class="mb-3">
                 <label for="nis" class="form-label">Nis</label>
-                <input type="text" class="form-control" name="nis" required>
+                <input type="text" class="form-control" name="nis" value="{{ $siswa->nis }}">
             </div>
             <div class="mb-3">
                 <label for="nisn" class="form-label">Nisn</label>
-                <input type="text" class="form-control" name="nisn" required>
+                <input type="text" class="form-control" name="nisn" required value="{{ $siswa->nisn }}">
             </div>
             <div class="mb-3">
-                <label for="jurusan">Jurusan</label>
+                <label for="jurusan" class="form-label">Jurusan</label>
                 <select class="form-select" name="jurusan">
                     <option value="RPL">RPL</option>
                     <option value="Jaringan">Jaringan</option>
@@ -47,11 +41,11 @@
             </div>
             <div class="mb-3">
                 <label for="tahun_masuk">Tahun Masuk</label>
-                <input type="text" class="form-control" name="tahun_masuk" required>
+                <input type="text" name="tahun_masuk" required value="{{ $siswa->tahun_masuk }}">
             </div>
             <div class="mb-3">
                 <label for="tahun_keluar">Tahun Keluar</label>
-                <input type="text" class="form-control" name="tahun_keluar" required>
+                <input type="text" name="tahun_keluar" required value="{{ $siswa->tahun_keluar }}">
             </div>
             <div class="mb-3">
                 <label for="status">Status</label>
@@ -62,7 +56,8 @@
             </div>
             <div class="mb-3">
                 <label for="nomor_telepon" class="form-label">No.Telepon</label>
-                <input type="text" class="form-control" name="nomor_telepon" required>
+                <input type="text" class="form-control" name="nomor_telepon" required
+                    value="{{ $siswa->nomor_telepon }}">
             </div>
             <div>
                 <button type="submit" class="btn btn-success">OK</button>

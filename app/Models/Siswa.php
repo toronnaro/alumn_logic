@@ -18,8 +18,8 @@ class Siswa extends Model
         'nis',
         'nisn',
         'jurusan',
-        'tanggal_masuk',
-        'tanggal_keluar',
+        'tahun_masuk',
+        'tahun_keluar',
         'status',
         'nomor_telepon'
     ];

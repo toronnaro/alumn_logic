@@ -31,20 +31,20 @@ class SiswaController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    //store digunakan untuk membuat dan menyimpan data
+    //store digunakan untuk menambahkan dan menyimpan data
     public function store(Request $request)
     {
         $validatedData = $request->validate([
             'nama' => 'required',
             'gender' => 'required',
             'birthplace' => 'required',
-            'nis' => 'required',
-            'nisn' => 'required',
+            'nis' => 'required|min:1|max:11',
+            'nisn' => 'required|min:1|max:11',
             'jurusan' => 'required',
-            'tanggal_masuk' => 'required',
-            'tanggal_keluar' => 'required',
+            'tahun_masuk' => 'required',
+            'tahun_keluar' => 'required',
             'status' => 'required',
-            'nomor_telepon' => 'required'
+            'nomor_telepon' => 'required|min:1|max:13'
         ]);
 
         Siswa::create($validatedData);
@@ -64,10 +64,12 @@ class SiswaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    //edit digunakan untuk mengatur dalam data
+    //edit digunakan untuk mengarahkan dan mengatur data
     public function edit(Siswa $siswa)
     {
-        //
+        return view('master.edit', [
+            'siswa' => $siswa
+        ]);
     }
 
     /**
@@ -76,7 +78,22 @@ class SiswaController extends Controller
     //update digunakan untuk mengubah data
     public function update(Request $request, Siswa $siswa)
     {
-        //
+        $validatedData = $request->validate([
+            'nama' => 'required',
+            'gender' => 'required',
+            'birthplace' => 'required',
+            'nis' => 'required|min:1|max:11',
+            'nisn' => 'required|min:1|max:11',
+            'jurusan' => 'required',
+            'tahun_masuk' => 'required',
+            'tahun_keluar' => 'required',
+            'status' => 'required',
+            'nomor_telepon' => 'required|min:1|max:13'
+        ]);
+
+        $siswa->update($validatedData);
+
+        return redirect()->route('siswa.index');
     }
 
     /**

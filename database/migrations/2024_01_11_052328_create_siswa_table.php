@@ -18,9 +18,9 @@ return new class extends Migration
             $table->date('birthplace');
             $table->char('nis');
             $table->char('nisn');
-            $table->char('jurusan');
-            $table->date('tanggal_masuk');
-            $table->date('tanggal_keluar');
+            $table->enum('jurusan', ['RPL', 'Jaringan', 'DKV', 'Manajemen Informatika']);
+            $table->char('tahun_masuk');
+            $table->char('tahun_keluar');
             $table->enum('status', ['Kuliah', 'Bekerja']);
             $table->char('nomor_telepon');
             $table->timestamps();
