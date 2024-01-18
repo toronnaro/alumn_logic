@@ -18,7 +18,7 @@
                 <th scope="col">Tanggal Keluar</th>
                 <th scope="col">Status</th>
                 <th scope="col">Nomor Telepon</th>
-                <th scope="col">Del</th>
+                <th scope="col">***</th>
 
             </tr>
         </thead>
@@ -42,7 +42,7 @@
                         <form action="/siswa/{{ $siswa->id }}" class="d-inline" method="post">
                             @csrf
                             @method('DELETE')
-                            <button class="badge bg-danger border-0 p-2">Delete</button>
+                            <button class="badge bg-danger border-0 p-2">Del</button>
                         </form>
                     </td>
                 </tr>
