@@ -1,7 +1,8 @@
 @extends('template.main')
 
 @section('container')
-    <h1 class="text-center">Add Data Form</h1>
+    <link rel="stylesheet" href="{{ '/' }}css/dashboard.css">
+    <h1 class="text-center">Edit Data Form</h1>
 
     <div class="container">
         <form action="{{ route('siswa.update', $siswa->id) }}" method="POST" class="col-lg-8">
@@ -64,4 +65,5 @@
             </div>
         </form>
     </div>
+    <script src="{{ '/' }}js/app.js"></script>
 @endsection

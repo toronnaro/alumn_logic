@@ -1,6 +1,7 @@
 @extends('template.main')
 
 @section('container')
+    <link rel="stylesheet" href="{{ '/' }}css/dashboard.css">
     <h1 class="text-center">Form Tambah Data</h1>
 
     <div class="container">
@@ -9,8 +10,8 @@
             <div class="mb-3">
                 <label for="nama" class="form-label">Nama</label>
                 <input type="text" class="form-control @error('nama') is-invalid
-                @enderror" name="nama"
-                    required>
+                @enderror"
+                    name="nama" required>
                 @error('nama')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -69,4 +70,5 @@
             </div>
         </form>
     </div>
+    <script src="{{ '/' }}js/app.js"></script>
 @endsection

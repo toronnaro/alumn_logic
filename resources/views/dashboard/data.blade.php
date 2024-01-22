@@ -3,6 +3,8 @@
 @extends('template.main') <!-- menghubungkan ke resources/views/template/main  -->
 
 @section('container')
+    <link rel="stylesheet" href="css/dashboard.css">
+
     <!-- 'section' untuk memanggil si template (yield)  -->
     <h1 class="mb-3 text-center ">Data Alumni</h1>
     <table class="table table-hover text-center">
@@ -52,4 +54,6 @@
             @endforeach
         </tbody>
     </table>
+
+    <script src="js/app.js"></script>
 @endsection

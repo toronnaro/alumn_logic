@@ -14,7 +14,7 @@ class SiswaController extends Controller
     //index berfungsi untuk menampilkan semua data
     public function index()
     {
-        return view('master.data', [
+        return view('dashboard.data', [
             'siswas' => Siswa::all()
         ]);
     }
@@ -25,7 +25,7 @@ class SiswaController extends Controller
     //create berfungsi untuk mengarahkan ke form pembuatan data
     public function create()
     {
-        return view('master.create');
+        return view('dashboard.create');
     }
 
     /**
@@ -67,7 +67,7 @@ class SiswaController extends Controller
     //edit digunakan untuk mengarahkan dan mengatur data
     public function edit(Siswa $siswa)
     {
-        return view('master.edit', [
+        return view('dashboard.edit', [
             'siswa' => $siswa
         ]);
     }
