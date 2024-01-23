@@ -26,3 +26,7 @@ Route::resource('guru', GuruController::class);
 Route::get('/', function () {
     return view('dashboard.main');
 });
+
+Route::get('/tentangsekolah', function () {
+    return view('dashboard.tentangsekolah');
+});

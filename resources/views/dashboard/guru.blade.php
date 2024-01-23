@@ -15,7 +15,6 @@
         </thead>
         <tbody>
             @foreach ($gurus as $guru)
-                <!-- 'foreach' digunakan untuk mengulang  -->
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $guru->nama }}</td>

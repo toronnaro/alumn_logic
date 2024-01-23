@@ -11,7 +11,6 @@ class SiswaController extends Controller
     /**
      * Display a listing of the resource.
      */
-    //index berfungsi untuk menampilkan semua data
     public function index()
     {
         return view('dashboard.data', [
@@ -22,7 +21,6 @@ class SiswaController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    //create berfungsi untuk mengarahkan ke form pembuatan data
     public function create()
     {
         return view('dashboard.create');
@@ -31,7 +29,6 @@ class SiswaController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    //store digunakan untuk menambahkan dan menyimpan data
     public function store(Request $request)
     {
         $validatedData = $request->validate([
@@ -55,7 +52,6 @@ class SiswaController extends Controller
     /**
      * Display the specified resource.
      */
-    //show digunakan untuk memunculkan data
     public function show(Siswa $siswa)
     {
         //
@@ -64,7 +60,6 @@ class SiswaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    //edit digunakan untuk mengarahkan dan mengatur data
     public function edit(Siswa $siswa)
     {
         return view('dashboard.edit', [
@@ -75,7 +70,6 @@ class SiswaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    //update digunakan untuk mengubah data
     public function update(Request $request, Siswa $siswa)
     {
         $validatedData = $request->validate([
@@ -99,7 +93,6 @@ class SiswaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    //destroy digunakan untuk menghapus data
     public function destroy(Siswa $siswa)
     {
         Siswa::destroy($siswa->id);

@@ -14,9 +14,8 @@
 
     <div class="sidebar-links">
         <ul>
-            <div class="active-tab"></div>
-            <li class="tooltip-element">
-                <a href="/" class="{{ Request::is('/') ? 'active' : '' }}">
+            <li class="tooltip-element" id="Tab">
+                <a href="/">
                     <div class="icon">
                         <i class='bx bx-tachometer'></i>
                         <i class='bx bxs-tachometer'></i>
@@ -24,8 +23,8 @@
                     <span class="link hide">Dashboard</span>
                 </a>
             </li>
-            <li class="tooltip-element">
-                <a href="/siswa" class="{{ Request::is('/siswa') ? 'active' : '' }}">
+            <li class="tooltip-element" id="siswaTab">
+                <a href="/siswa">
                     <div class="icon">
                         <i class='bx bx-folder'></i>
                         <i class='bx bxs-folder'></i>
@@ -33,8 +32,8 @@
                     <span class="link hide">Data Alumni Siswa</span>
                 </a>
             </li>
-            <li class="tooltip-element" data-tooltip="2">
-                <a href="{{ route('guru.index') }}" data-active="2">
+            <li class="tooltip-element" id="guruTab">
+                <a href="{{ route('guru.index') }}">
                     <div class="icon">
                         <i class='bx bx-message-square-detail'></i>
                         <i class='bx bxs-message-square-detail'></i>
@@ -42,8 +41,8 @@
                     <span class="link hide">Guru</span>
                 </a>
             </li>
-            <li class="tooltip-element" data-tooltip="3">
-                <a href="#" data-active="3">
+            <li class="tooltip-element" id="tentangsekolahTab">
+                <a href="/tentangsekolah">
                     <div class="icon">
                         <i class='bx bx-bar-chart-square'></i>
                         <i class='bx bxs-bar-chart-square'></i>
@@ -119,3 +118,17 @@
         </div>
     </div>
 </nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var currentPath = window.location.pathname;
+
+        currentPath = currentPath.replace(/^\//, '');
+
+        var activeTab = document.getElementById(currentPath + 'Tab');
+
+        if (activeTab) {
+            activeTab.classList.add('active-tab');
+        }
+    });
+</script>
