@@ -27,6 +27,10 @@ Route::get('/', function () {
     return view('dashboard.main');
 });
 
+Route::get('/login', function () {
+    return view('login.login');
+});
+
 Route::get('/tentangsekolah', function () {
     return view('dashboard.tentangsekolah');
 });

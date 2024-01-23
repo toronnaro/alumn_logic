@@ -60,40 +60,6 @@
 
         <h4 class="hide">Shortcuts</h4>
 
-        <ul>
-            <li class="tooltip-element" data-tooltip="0">
-                <a href="#" data-active="4">
-                    <div class="icon">
-                        <i class='bx bx-notepad'></i>
-                        <i class='bx bxs-notepad'></i>
-                    </div>
-                    <span class="link hide">Tasks</span>
-                </a>
-            </li>
-            <li class="tooltip-element" data-tooltip="1">
-                <a href="#" data-active="5">
-                    <div class="icon">
-                        <i class='bx bx-help-circle'></i>
-                        <i class='bx bxs-help-circle'></i>
-                    </div>
-                    <span class="link hide">Help</span>
-                </a>
-            </li>
-            <li class="tooltip-element" data-tooltip="2">
-                <a href="#" data-active="6">
-                    <div class="icon">
-                        <i class='bx bx-cog'></i>
-                        <i class='bx bxs-cog'></i>
-                    </div>
-                    <span class="link hide">Settings</span>
-                </a>
-            </li>
-            <div class="tooltip">
-                <span class="show">Tasks</span>
-                <span>Help</span>
-                <span>Settings</span>
-            </div>
-        </ul>
     </div>
 
     <div class="sidebar-footer">
@@ -108,7 +74,7 @@
                     <h5>Founder</h5>
                 </div>
             </div>
-            <a href="#" class="log-out">
+            <a href="/login" class="log-out">
                 <i class='bx bx-log-out'></i>
             </a>
         </div>
