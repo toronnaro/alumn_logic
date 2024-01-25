@@ -3,7 +3,7 @@
         <span class="shrink-btn">
             <i class='bx bx-chevron-left'></i>
         </span>
-        <img src="{{ '' }}img/logo.png" class="logo" alt="">
+        <img src="{{ '' }}img/iqislogo.png" class="logo" alt="">
         <h3 class="hide">ALUMNI SMKIT IQIS</h3>
     </div>
 
