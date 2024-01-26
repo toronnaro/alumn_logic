@@ -13,7 +13,7 @@
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
-                <!-- Form 1 -->
+                <!-- Form 1 Sign In -->
                 <form action="{{ route('siswa.index') }}" method="GET" class="sign-in-form">
                     <h2 class="title">Sign in</h2>
                     <div class="input-field">
@@ -43,7 +43,7 @@
                     </div>
                 </form>
 
-                <!-- Form 2 -->
+                <!-- Form 2  Sign Up-->
                 <form action="#" class="sign-up-form">
                     <h2 class="title">Sign up</h2>
                     <div class="input-field">

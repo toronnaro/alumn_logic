@@ -25,9 +25,9 @@
                     <option value="FEMALE">Female</option>
                 </select>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 ">
                 <label for="birthplace">Tgl Lahir</label>
-                <input type="date" name="birthplace" required>
+                <input type="date" class="form-control" name="birthplace" required>
             </div>
             <div class="mb-3">
                 <label for="nis" class="form-label">Nis</label>
