@@ -15,7 +15,7 @@
             <div class="signin-signup">
                 <!-- Form 1 -->
                 <form action="{{ route('siswa.index') }}" method="GET" class="sign-in-form">
-                    <img src="{{ '' }} img/smk.png" alt="" class="logos">
+                    <img src="{{ '' }} img/SMKIT IQIS Logo.png" alt="" class="logos">
                     <h2 class="title">Sign in</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
@@ -46,7 +46,7 @@
 
                 <!-- Form 2 -->
                 <form action="#" class="sign-up-form">
-                <img src="{{ '' }} img/smk.png" alt="" class="logos">
+                <img src="{{ '' }} img/SMKIT IQIS Logo.png" alt="" class="logos">
                     <h2 class="title">Sign up</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
