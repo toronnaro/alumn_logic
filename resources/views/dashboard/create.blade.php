@@ -19,15 +19,15 @@
                 @enderror
             </div>
             <div class="mb-3">
-                <label for="gender">Gender</label>
+                <label for="gender">Gender</label>      
                 <select class="form-select" name="gender">
                     <option value="MALE">Male</option>
                     <option value="FEMALE">Female</option>
                 </select>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 ">
                 <label for="birthplace">Tgl Lahir</label>
-                <input type="date" name="birthplace" required>
+                <input type="date" class="form-control" name="birthplace" required>
             </div>
             <div class="mb-3">
                 <label for="nis" class="form-label">Nis</label>

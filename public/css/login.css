@@ -49,6 +49,7 @@ form {
     overflow: hidden;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+
 }
 
 form.sign-up-form {
@@ -398,3 +399,11 @@ form.sign-in-form {
         left: 50%;
     }
 }
+
+/* LOGOS */
+.logos {
+    width: 200px;
+    height: auto;
+    padding-bottom: 2rem;
+
+    }

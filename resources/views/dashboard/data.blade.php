@@ -1,7 +1,7 @@
 @extends('template.main')
 
 @section('container')
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="{{ '/' }}css/dashboard.css">
 
     <h1 class="mb-3 text-center ">Data Alumni</h1>
     <table class="table table-hover text-center">
@@ -31,7 +31,7 @@
                         <form action="/siswa/{{ $siswa->id }}" class="d-inline" method="post">
                             @csrf
                             @method('DELETE')
-                            <button class="badge bg-danger border-0 p-2" onclick="return confirm('Yoi ga?')">Del</button>
+                            <button class="badge bg-danger border-0 p-2" onclick="return confirm('Anda yakin ingin mengapusnya?')">Del</button>
                         </form>
                         <a class="badge bg-warning border-0 p-2" href="{{ route('siswa.edit', $siswa->id) }}">Edit</a>
                     </td>

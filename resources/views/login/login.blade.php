@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ '' }}css/login.css" />
-    <title>Sign in & Sign up Form</title>
+    <title>ALUMNI SMKIT IQIS</title>
 </head>
 
 <body>
@@ -14,8 +14,8 @@
         <div class="forms-container">
             <div class="signin-signup">
                 <!-- Form 1 -->
-                <form action="/login" method="POST" class="sign-in-form">
-                    @csrf
+                <form action="{{ route('siswa.index') }}" method="GET" class="sign-in-form">
+                    <img src="{{ '' }} img/SMKIT IQIS Logo.png" alt="" class="logos">
                     <h2 class="title">Sign in</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
@@ -27,59 +27,63 @@
                     </div>
                     <input type="submit" class="btn solid" />
 
-                    <p class="social-text">Or Sign in with social platforms</p>
+                    <p class="social-text">Our Social Media</p>
                     <div class="social-media">
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-facebook-f"></i>
+                        <a href="https://www.instagram.com/smkitibnulqayyim/" class="social-icon">
+                            <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-twitter"></i>
+                        <a href="https://www.youtube.com/@IQISTV" class="social-icon">
+                            <i class="fab fa-youtube"></i>
                         </a>
-                        <a href="#" class="social-icon">
+                        <a href="https://www.smkit.iqis.sch.id/" class="social-icon">
                             <i class="fab fa-google"></i>
                         </a>
                         <a href="#" class="social-icon">
-                            <i class="fab fa-linkedin-in"></i>
+                            <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
                 </form>
 
                 <!-- Form 2 -->
-                <form action="/register" class="sign-up-form" method="POST">
-                    @csrf
-                    <h2 class="title">Sign up</h2>
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Name" name="name" />
-                    </div>
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" name="username" />
-                    </div>
-                    <div class="input-field">
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="Email" name="email" />
-                    </div>
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" name="password" />
-                    </div>
-                    <button type="submit">SIGN UP</button>
-                    <p class="social-text">Or Sign up with social platforms</p>
-                    <div class="social-media">
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-google"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
+                <form action="#" class="sign-up-form">
+                    <<<<<<< HEAD <!-- <img src="{{ '' }} img/SMKIT IQIS Logo.png" alt=""
+                        class="logos"> -->
+                        =======
+                        <img src="{{ '' }} img/SMKIT IQIS Logo.png" alt="" class="logos">
+                        >>>>>>> 041b0b475bcae733447534fd8040fb8fe45de9ce
+                        <h2 class="title">Sign up</h2>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Name" name="name" />
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Username" name="username" />
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" placeholder="Email" name="email" />
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Password" name="password" />
+                        </div>
+                        <button type="submit">SIGN UP</button>
+                        <p class="social-text">Or Sign up with social platforms</p>
+                        <div class="social-media">
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
                 </form>
             </div>
         </div>
@@ -89,8 +93,7 @@
                 <div class="content">
                     <h3>New here ?</h3>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-                        ex ratione. Aliquid!
+                        If you're new here, we recommend registering an account first.
                     </p>
                     <button class="btn transparent" id="sign-up-btn">
                         <a href="/register">Sign up</a>
@@ -102,8 +105,7 @@
                 <div class="content">
                     <h3>One of us ?</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                        laboriosam ad deleniti.
+                        If you are one of us, please log in from here.
                     </p>
                     <button class="btn transparent" id="sign-in-btn">
                         Sign in

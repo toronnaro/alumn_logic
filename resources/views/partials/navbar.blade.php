@@ -3,7 +3,7 @@
         <span class="shrink-btn">
             <i class='bx bx-chevron-left'></i>
         </span>
-        <img src="{{ '' }}img/logo.png" class="logo" alt="">
+        <img src="{{ '/' }}img/iqislogo.png" class="logo" alt="">
         <h3 class="hide">ALUMNI SMKIT IQIS</h3>
     </div>
 
@@ -72,7 +72,7 @@
         </a>
         <div class="admin-user tooltip-element" data-tooltip="1">
             <div class="admin-profile hide">
-                <img src="./img/face-1.png" alt="">
+                <img src="{{ '/' }}img/face-1.png" alt="">
                 <div class="admin-info">
                     <h3>Agung</h3>
                     <h5>Founder</h5>
