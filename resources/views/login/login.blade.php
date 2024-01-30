@@ -14,7 +14,8 @@
         <div class="forms-container">
             <div class="signin-signup">
                 <!-- Form 1 -->
-                <form action="{{ route('siswa.index') }}" method="GET" class="sign-in-form">
+                <form action="/login" method="POST" class="sign-in-form">
+                    @csrf
                     <img src="{{ '' }} img/SMKIT IQIS Logo.png" alt="" class="logos">
                     <h2 class="title">Sign in</h2>
                     <div class="input-field">

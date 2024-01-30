@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="css/dashboard.css">
 
     <main>
-        <h1>Welcome Back There</h1>
+        <h1>Welcome Back {{ auth()->user()->name }}</h1>
         <p class="text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur animi voluptatibus cum maxime distinctio
             iste quod deleniti eius, autem voluptates cumque suscipit iure quasi eligendi ullam. Sapiente eligendi porro

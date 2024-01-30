@@ -30,7 +30,8 @@
             <i class="fas fa-lock"></i>
             <input type="password" placeholder="Password" name="password" />
         </div>
-        <button type="submit">SIGN UP</button>
+        <input type="submit" class="btn solid" />
+
     </form>
 
 

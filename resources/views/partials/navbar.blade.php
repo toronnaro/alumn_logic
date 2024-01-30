@@ -74,17 +74,12 @@
             <div class="admin-profile hide">
                 <img src="{{ '/' }}img/face-1.png" alt="">
                 <div class="admin-info">
-                    <h3>Agung</h3>
                     <h5>Founder</h5>
                 </div>
             </div>
 
         </div>
-        <div class="tooltip">
-            <span class="show">Agung</span>
 
-        </div>
-    </div>
 </nav>
 
 <script>
