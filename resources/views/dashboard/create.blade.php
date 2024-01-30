@@ -19,7 +19,7 @@
                 @enderror
             </div>
             <div class="mb-3">
-                <label for="gender">Gender</label>
+                <label for="gender">Gender</label>      
                 <select class="form-select" name="gender">
                     <option value="MALE">Male</option>
                     <option value="FEMALE">Female</option>
