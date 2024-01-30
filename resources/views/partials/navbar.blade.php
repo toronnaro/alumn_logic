@@ -50,6 +50,10 @@
                     <span class="link hide">Tentang Sekolah</span>
                 </a>
             </li>
+            <form action="/logout" method="POST">
+                @csrf
+                <button type="submit">Logout</button>
+            </form>
             <div class="tooltip">
                 <span class="show">Dashboard</span>
                 <span>Data Alumni Siswa</span>
@@ -74,13 +78,11 @@
                     <h5>Founder</h5>
                 </div>
             </div>
-            <a href="/login" class="log-out">
-                <i class='bx bx-log-out'></i>
-            </a>
+
         </div>
         <div class="tooltip">
             <span class="show">Agung</span>
-            <span>Logout</span>
+
         </div>
     </div>
 </nav>

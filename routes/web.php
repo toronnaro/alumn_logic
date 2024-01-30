@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GuruController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +17,9 @@ use App\Http\Controllers\SiswaController;
 |
 */
 
-Route::resource('siswa', SiswaController::class);
+Route::resource('siswa', SiswaController::class)->middleware('auth');
 
-Route::resource('guru', GuruController::class);
+Route::resource('guru', GuruController::class)->middleware('auth');
 
 // Route::get('/', function () {
 //     return view('master.home');
@@ -25,12 +27,27 @@ Route::resource('guru', GuruController::class);
 
 Route::get('/', function () {
     return view('dashboard.main');
-});
+})->middleware('auth');
 
 Route::get('/login', function () {
     return view('login.login');
-});
+})->middleware('guest');
 
 Route::get('/tentangsekolah', function () {
     return view('dashboard.tentangsekolah');
-});
+})->middleware('auth');
+
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
+
+// Register - Create User
+Route::post('/register', [RegisterController::class, 'store']);
+
+
+// Login
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+
+// Login - Authentication
+Route::post('/login', [LoginController::class, 'authenticate']);
+
+// Logout
+Route::post('/logout', [LoginController::class, 'logout']);

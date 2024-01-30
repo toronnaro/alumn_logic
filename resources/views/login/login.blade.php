@@ -14,17 +14,18 @@
         <div class="forms-container">
             <div class="signin-signup">
                 <!-- Form 1 -->
-                <form action="{{ route('siswa.index') }}" method="GET" class="sign-in-form">
+                <form action="/login" method="POST" class="sign-in-form">
+                    @csrf
                     <h2 class="title">Sign in</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" />
+                        <input type="text" placeholder="Email" name="email" />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" />
+                        <input type="password" placeholder="Password" name="password" />
                     </div>
-                    <input type="submit" value="Login" class="btn solid" />
+                    <input type="submit" class="btn solid" />
 
                     <p class="social-text">Or Sign in with social platforms</p>
                     <div class="social-media">
@@ -44,21 +45,26 @@
                 </form>
 
                 <!-- Form 2 -->
-                <form action="#" class="sign-up-form">
+                <form action="/register" class="sign-up-form" method="POST">
+                    @csrf
                     <h2 class="title">Sign up</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" />
+                        <input type="text" placeholder="Name" name="name" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username" name="username" />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="Email" />
+                        <input type="email" placeholder="Email" name="email" />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" />
+                        <input type="password" placeholder="Password" name="password" />
                     </div>
-                    <input type="submit" class="btn" value="Sign up" />
+                    <button type="submit">SIGN UP</button>
                     <p class="social-text">Or Sign up with social platforms</p>
                     <div class="social-media">
                         <a href="#" class="social-icon">
@@ -87,7 +93,7 @@
                         ex ratione. Aliquid!
                     </p>
                     <button class="btn transparent" id="sign-up-btn">
-                        Sign up
+                        <a href="/register">Sign up</a>
                     </button>
                 </div>
                 <img src="img/log.svg" class="image" alt="" />
