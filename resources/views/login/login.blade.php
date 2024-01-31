@@ -47,11 +47,8 @@
 
                 <!-- Form 2 -->
                 <form action="#" class="sign-up-form">
-                    <<<<<<< HEAD <!-- <img src="{{ '' }} img/SMKIT IQIS Logo.png" alt=""
-                        class="logos"> -->
-                        =======
+                    <!-- <img src="{{ '' }} img/SMKIT IQIS Logo.png" alt=""class="logos"> -->
                         <img src="{{ '' }} img/SMKIT IQIS Logo.png" alt="" class="logos">
-                        >>>>>>> 041b0b475bcae733447534fd8040fb8fe45de9ce
                         <h2 class="title">Sign up</h2>
                         <div class="input-field">
                             <i class="fas fa-user"></i>
