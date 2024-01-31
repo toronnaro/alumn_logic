@@ -63,23 +63,29 @@
         </ul>
 
         <h4 class="hide">Shortcuts</h4>
-
-    </div>
-
-    <div class="sidebar-footer">
-        <a href="#" class="account tooltip-element" data-tooltip="0">
-            <i class='bx bx-user'></i>
-        </a>
-        <div class="admin-user tooltip-element" data-tooltip="1">
-            <div class="admin-profile hide">
-                <img src="{{ '/' }}img/face-1.png" alt="">
-                <div class="admin-info">
-                    <h5>Founder</h5>
-                </div>
+        <!-- the map -->
+        <iframe
+            width="600"
+            height="450"
+            frameborder="0"
+            style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Space+Needle,Seattle+WA"
+            allowfullscreen>
+        </iframe>
             </div>
 
-        </div>
-
+            <div class="sidebar-footer">
+                <a href="#" class="account tooltip-element" data-tooltip="0">
+                    <i class='bx bx-user'></i>
+                </a>
+                <div class="admin-user tooltip-element" data-tooltip="1">
+                    <div class="admin-profile hide">
+                        <img src="{{ '/' }}img/face-1.png" alt="">
+                        <div class="admin-info">
+                            <h5>Founder</h5>
+                        </div>
+                    </div>
+                </div>
 </nav>
 
 <script>
