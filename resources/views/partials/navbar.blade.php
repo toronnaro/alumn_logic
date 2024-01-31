@@ -58,7 +58,18 @@
             </div>
         </ul>
 
-        <h4 class="hide">Shortcuts</h4>
+        <h4 class="hide">Map Iqis Location</h4>
+        <!-- map alamat iqis-->
+        <iframe
+            width="220"
+            height="250"
+            frameborder="0"
+            style="border:0"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.0598971258896!2d119.50971857458985!3d-5.09401825164261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbefb879f7636e7%3A0xa195cc00d794c676!2sSMPIT-SMKIT%20Ibnul%20Qayyim%20Makassar!5e0!3m2!1sid!2sid!4v1706680373202!5m2!1sid!2sid"
+            allowfullscreen>
+        </iframe>
+    </div>
+        </div>
 
     </div>
 
