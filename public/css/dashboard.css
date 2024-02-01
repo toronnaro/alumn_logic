@@ -392,3 +392,26 @@ body.shrink .admin-profile {
 body.shrink .tooltip {
     display: grid;
 }
+
+.underline{
+    width: 98%;
+    height: 1px;
+    background: rgb(208, 208, 208);
+    border-radius: 3px;
+    position: absolute;
+    top: 167px;
+    left: 0;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.underline2{
+    width: 98%;
+    height: 1px;
+    background: rgb(208, 208, 208);
+    border-radius: 3px;
+    position: absolute;
+    top: 477px;
+    left: 0;
+    margin-top: 10px;
+    overflow: hidden;
+}

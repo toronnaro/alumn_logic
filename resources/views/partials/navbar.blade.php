@@ -41,6 +41,9 @@
                     <span class="link hide">Guru</span>
                 </a>
             </li>
+            <br>
+            <div class="underline"><span></span></div>
+            <div class="underline2"><span></span></div>
             <li class="tooltip-element" id="tentangsekolahTab">
                 <a href="/tentangsekolah">
                     <div class="icon">
