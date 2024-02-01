@@ -11,7 +11,7 @@
         <i class='bx bx-search'></i>
         <input type="text" class="hide" placeholder="Quick Search ...">
     </div>
-
+    <div class="underline3"><span></span></div>
     <div class="sidebar-links">
         <ul>
             <li class="tooltip-element" id="Tab">
