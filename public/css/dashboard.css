@@ -410,8 +410,14 @@ body.shrink .tooltip {
     background: rgb(208, 208, 208);
     border-radius: 3px;
     position: absolute;
-    top: 477px;
+    top: 28rem;
     left: 0;
     margin-top: 10px;
     overflow: hidden;
 }
+
+.max-width-div {
+    max-width: 1200px; /* Lebar maksimum */
+    max-height: 1200px; /* Tinggi maksimum */
+  }
+  
