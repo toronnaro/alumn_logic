@@ -12,9 +12,8 @@ class LoginController extends Controller
     // Show Login Form
     public function index()
     {
-        return view('login.login', [
-            "title" => "Login",
-        ]);
+
+        return view('login.login',);
     }
 
     // Authentication Session
@@ -30,7 +29,7 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('/siswa');
+            return redirect()->intended('/');
         }
 
         // If Login is Failed, Back To First View (Login View)

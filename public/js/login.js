@@ -9,3 +9,11 @@ sign_up_btn.addEventListener("click", () => {
 sign_in_btn.addEventListener("click", () => {
     container.classList.remove("sign-up-mode");
 });
+
+document.getElementById("sign-up-btn").addEventListener("click", function () {
+    container.classList.add("sign-up-mode");
+});
+
+document.getElementById("sign-in-btn").addEventListener("click", function () {
+    container.classList.remove("sign-up-mode");
+});

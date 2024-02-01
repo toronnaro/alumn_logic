@@ -37,10 +37,10 @@ Route::get('/tentangsekolah', function () {
     return view('dashboard.tentangsekolah');
 })->middleware('auth');
 
-Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
+// Route::get('/register', [RegisterController::class, 'index'])->middleware('guest')->name('register');
 
 // Register - Create User
-Route::post('/register', [RegisterController::class, 'store']);
+Route::post('/register', [RegisterController::class, 'store'])->name('register');
 
 
 // Login

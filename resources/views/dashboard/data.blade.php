@@ -31,7 +31,8 @@
                         <form action="/siswa/{{ $siswa->id }}" class="d-inline" method="post">
                             @csrf
                             @method('DELETE')
-                            <button class="badge bg-danger border-0 p-2" onclick="return confirm('Anda yakin ingin mengapusnya?')">Del</button>
+                            <button class="badge bg-danger border-0 p-2"
+                                onclick="return confirm('Anda yakin ingin menghapusnya?')">Del</button>
                         </form>
                         <a class="badge bg-warning border-0 p-2" href="{{ route('siswa.edit', $siswa->id) }}">Edit</a>
                     </td>

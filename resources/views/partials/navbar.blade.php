@@ -50,10 +50,6 @@
                     <span class="link hide">Tentang Sekolah</span>
                 </a>
             </li>
-            <form action="/logout" method="POST">
-                @csrf
-                <button type="submit">Logout</button>
-            </form>
             <div class="tooltip">
                 <span class="show">Dashboard</span>
                 <span>Data Alumni Siswa</span>
@@ -61,9 +57,6 @@
                 <span>Tentang Sekolah</span>
             </div>
         </ul>
-
-        <h4 class="hide">Shortcuts</h4>
-
     </div>
 
     <div class="sidebar-footer">
@@ -73,13 +66,16 @@
         <div class="admin-user tooltip-element" data-tooltip="1">
             <div class="admin-profile hide">
                 <img src="{{ '/' }}img/face-1.png" alt="">
-                <div class="admin-info">
-                    <h5>Founder</h5>
+                <div class="admin-info mt-2">
+                    <h3>{{ auth()->user()->username }}</h3>
                 </div>
+                <form action="/logout" method="POST" class="ms-5">
+                    @csrf
+                    <button type="submit" class="btn btn-secondary px-3 py-2"
+                        onclick="return confirm('Anda Yakin Ingin Log-Out?')"><i class='bx bx-log-out'></i></button>
+                </form>
             </div>
-
         </div>
-
 </nav>
 
 <script>

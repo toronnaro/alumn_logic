@@ -12,10 +12,7 @@ class RegisterController extends Controller
     // Show Register Form
     public function index()
     {
-        return view('register.index', [
-            'title' => 'Register',
-            'active' => 'Login'
-        ]);
+        return view('login.login');
     }
 
     // Create a User
