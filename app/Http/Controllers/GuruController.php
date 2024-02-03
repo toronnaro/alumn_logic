@@ -65,4 +65,4 @@ class GuruController extends Controller
     {
         //
     }
-}
+}   

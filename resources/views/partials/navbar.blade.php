@@ -11,7 +11,7 @@
         <i class='bx bx-search'></i>
         <input type="text" class="hide" placeholder="Quick Search ...">
     </div>
-
+    <div class="underline3"><span></span></div>
     <div class="sidebar-links">
         <ul>
             <li class="tooltip-element" id="Tab">
@@ -41,6 +41,9 @@
                     <span class="link hide">Guru</span>
                 </a>
             </li>
+            <br>
+            <div class="underline"><span></span></div>
+            <div class="underline2"><span></span></div>
             <li class="tooltip-element" id="tentangsekolahTab">
                 <a href="/tentangsekolah">
                     <div class="icon">
@@ -50,11 +53,21 @@
                     <span class="link hide">Tentang Sekolah</span>
                 </a>
             </li>
+            <li class="tooltip-element" id="tentangsekolahTab">
+                <a href="/tentangsekolah">
+                    <div class="icon">
+                        <i class='bx bx-bar-chart-square'></i>
+                        <i class='bx bxs-bar-chart-square'></i>
+                    </div>
+                    <span class="link hide">Credit</span>
+                </a>
+            </li>
             <div class="tooltip">
                 <span class="show">Dashboard</span>
                 <span>Data Alumni Siswa</span>
                 <span>Guru</span>
                 <span>Tentang Sekolah</span>
+                <span>Credit</span>
             </div>
         </ul>
     </div>
