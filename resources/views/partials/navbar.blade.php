@@ -65,7 +65,7 @@
         </a>
         <div class="admin-user tooltip-element" data-tooltip="1">
             <div class="admin-profile hide">
-                <img src="{{ '/' }}img/face-1.png" alt="">
+                <img src="{{ '/' }}img/th.jpg" alt="">
                 <div class="admin-info mt-2">
                     <h3>{{ auth()->user()->username }}</h3>
                 </div>
