@@ -4,9 +4,10 @@
     <link rel="stylesheet" href="{{ '/' }}css/dashboard.css">
 
     <h1 class="mb-3 text-center ">Data Alumni</h1>
+    <a href="{{ route('siswa.create') }}" class="btn btn-success mb-3 ms-3">Tambah</a>
+    {{-- Tabel Start --}}
     <table class="table table-hover text-center">
         <thead>
-            <a href="{{ route('siswa.create') }}" class="btn btn-success mb-3">Tambah</a>
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Nama</th>
@@ -40,6 +41,38 @@
             @endforeach
         </tbody>
     </table>
+    {{-- Tabel End --}}
+
+
+    {{-- Card Start --}}
+    <div class="container">
+        <div class="row">
+            @foreach ($siswas as $siswa)
+                <div class="col-sm-2 mb-3">
+                    <div class="card width-siswa">
+                        @if ($siswa->image)
+                            <img src="{{ asset('storage/' . $siswa->image) }}" class="card-img-top"
+                                alt="{{ $siswa->nama }}">
+                        @else
+                            <img src="/img/siswa-unknown.png" class="card-img-top" alt="{{ $siswa->nama }}">
+                        @endif
+                        <div class="card-body">
+                            <h6 class="card-title">{{ $siswa->nama }}</h6>
+                            <p class="card-text">{{ $siswa->jurusan }}</p>
+                            <form action="/siswa/{{ $siswa->id }}" class="d-inline" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button class="badge bg-danger border-0 p-2"
+                                    onclick="return confirm('Anda yakin ingin menghapusnya?')">Del</button>
+                            </form>
+                            <a class="badge bg-warning border-0 p-2" href="{{ route('siswa.edit', $siswa->id) }}">Edit</a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+    {{-- Card End --}}
 
     <script src="js/app.js"></script>
 @endsection

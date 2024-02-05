@@ -11,7 +11,7 @@ class Siswa extends Model
 
     protected $table = 'siswa';
 
-    protected $fillable = [ // untuk apa saja yang diisi
+    protected $fillable = [
         'nama',
         'gender',
         'birthplace',
@@ -21,6 +21,7 @@ class Siswa extends Model
         'tahun_masuk',
         'tahun_keluar',
         'status',
-        'nomor_telepon'
+        'nomor_telepon',
+        'image'
     ];
 }

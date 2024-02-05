@@ -393,7 +393,7 @@ body.shrink .tooltip {
     display: grid;
 }
 
-.underline{
+.underline {
     width: 98%;
     height: 1px;
     background: rgb(208, 208, 208);
@@ -404,7 +404,7 @@ body.shrink .tooltip {
     margin-top: 10px;
     overflow: hidden;
 }
-.underline2{
+.underline2 {
     width: 98%;
     height: 1px;
     background: rgb(208, 208, 208);
@@ -416,8 +416,14 @@ body.shrink .tooltip {
     overflow: hidden;
 }
 
+/* CSS BROSUR */
 .max-width-div {
-    max-width: 1200px; /* Lebar maksimum */
-    max-height: 1200px; /* Tinggi maksimum */
-  }
-  
+    max-width: 1200px;
+    max-height: 1200px;
+}
+
+/* CSS CARD */
+.width-siswa {
+    width: 9rem;
+    gap: 1rem;
+}

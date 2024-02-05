@@ -34,6 +34,9 @@
             <div class="mb-3">
                 <label for="jurusan" class="form-label">Jurusan</label>
                 <select class="form-select" name="jurusan">
+                    @if ($siswa->jurusan)
+                        <option value="{{ $siswa->jurusan }}" selected>{{ $siswa->jurusan }}</option>
+                    @endif
                     <option value="RPL">RPL</option>
                     <option value="Jaringan">Jaringan</option>
                     <option value="DKV">DKV</option>

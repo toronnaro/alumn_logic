@@ -23,6 +23,7 @@ return new class extends Migration
             $table->char('tahun_keluar');
             $table->enum('status', ['Kuliah', 'Bekerja']);
             $table->char('nomor_telepon');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

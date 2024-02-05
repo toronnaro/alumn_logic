@@ -17,27 +17,31 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
+// CRUD SISWA
 Route::resource('siswa', SiswaController::class)->middleware('auth');
 
+// CRUD GURU
 Route::resource('guru', GuruController::class)->middleware('auth');
 
-// Route::get('/', function () {
-//     return view('master.home');
-// });
-
+// Dashboard View
 Route::get('/', function () {
     return view('dashboard.main');
 })->middleware('auth');
 
+// Penampil Halaman Login
 Route::get('/login', function () {
     return view('login.login');
 })->middleware('guest');
 
+// View TentangSekolahs
 Route::get('/tentangsekolah', function () {
     return view('dashboard.tentangsekolah');
 })->middleware('auth');
 
-// Route::get('/register', [RegisterController::class, 'index'])->middleware('guest')->name('register');
+// View Credit
+Route::get('/credit', function () {
+    return view('dashboard.credit');
+});
 
 // Register - Create User
 Route::post('/register', [RegisterController::class, 'store'])->name('register');

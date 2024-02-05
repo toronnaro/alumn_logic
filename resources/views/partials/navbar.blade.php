@@ -53,8 +53,8 @@
                     <span class="link hide">Tentang Sekolah</span>
                 </a>
             </li>
-            <li class="tooltip-element" id="tentangsekolahTab">
-                <a href="/tentangsekolah">
+            <li class="tooltip-element" id="creditTab">
+                <a href="/credit">
                     <div class="icon">
                         <i class='bx bx-bar-chart-square'></i>
                         <i class='bx bxs-bar-chart-square'></i>
@@ -89,6 +89,7 @@
                 </form>
             </div>
         </div>
+    </div>
 </nav>
 
 <script>

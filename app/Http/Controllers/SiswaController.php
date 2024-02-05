@@ -35,14 +35,20 @@ class SiswaController extends Controller
             'nama' => 'required',
             'gender' => 'required',
             'birthplace' => 'required',
-            'nis' => 'required|min:1|max:11',
-            'nisn' => 'required|min:1|max:11',
+            'nis' => 'required|min:3|max:11',
+            'nisn' => 'required|min:3|max:11',
             'jurusan' => 'required',
-            'tahun_masuk' => 'required',
-            'tahun_keluar' => 'required',
+            'tahun_masuk' => 'required|digits:4',
+            'tahun_keluar' => 'required|digits:4',
             'status' => 'required',
-            'nomor_telepon' => 'required|min:1|max:13'
+            'nomor_telepon' => 'required|min:3|max:13',
+            'image' => 'image|file|max:2048'
         ]);
+
+        // Validasi & Penempatan Image Siswa
+        if ($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('images');
+        }
 
         Siswa::create($validatedData);
 
@@ -76,13 +82,13 @@ class SiswaController extends Controller
             'nama' => 'required',
             'gender' => 'required',
             'birthplace' => 'required',
-            'nis' => 'required|min:1|max:11',
-            'nisn' => 'required|min:1|max:11',
+            'nis' => 'required|min:3|max:11',
+            'nisn' => 'required|min:3|max:11',
             'jurusan' => 'required',
-            'tahun_masuk' => 'required',
-            'tahun_keluar' => 'required',
+            'tahun_masuk' => 'required|digits:4',
+            'tahun_keluar' => 'required|digits:4',
             'status' => 'required',
-            'nomor_telepon' => 'required|min:1|max:13'
+            'nomor_telepon' => 'required|min:3|max:13'
         ]);
 
         $siswa->update($validatedData);
