@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Siswa;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class SiswaController extends Controller
 {
@@ -78,7 +79,7 @@ class SiswaController extends Controller
      */
     public function update(Request $request, Siswa $siswa)
     {
-        $validatedData = $request->validate([
+        $rules = [
             'nama' => 'required',
             'gender' => 'required',
             'birthplace' => 'required',
@@ -88,10 +89,21 @@ class SiswaController extends Controller
             'tahun_masuk' => 'required|digits:4',
             'tahun_keluar' => 'required|digits:4',
             'status' => 'required',
-            'nomor_telepon' => 'required|min:3|max:13'
-        ]);
+            'nomor_telepon' => 'required|min:3|max:13',
+            'image' => 'image|file|max:2048'
+        ];
 
-        $siswa->update($validatedData);
+        $validatedData = $request->validate($rules);
+
+        if ($request->file('image')) {
+             
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $validatedData['image'] = $request->file('image')->store('images');
+        }
+
+        Siswa::where('id', $siswa->id)->update($validatedData);
 
         return redirect()->route('siswa.index');
     }
@@ -101,6 +113,11 @@ class SiswaController extends Controller
      */
     public function destroy(Siswa $siswa)
     {
+
+        if ($siswa->image) {
+            Storage::delete($siswa->image);
+        }
+
         Siswa::destroy($siswa->id);
 
         return redirect()->route('siswa.index');

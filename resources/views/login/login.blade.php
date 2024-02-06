@@ -16,6 +16,7 @@
                 <!-- Form 1 -->
                 <form action="/login" method="POST" class="sign-in-form">
                     @csrf
+                    <img src="{{ '' }} img/SMKIT IQIS Logo.png" class="logos" alt="">
                     <h2 class="title">Sign in</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>

@@ -5,7 +5,7 @@
     <h1 class="text-center">Edit Data Form</h1>
 
     <div class="container">
-        <form action="{{ route('siswa.update', $siswa->id) }}" method="POST" class="col-lg-8">
+        <form action="{{ route('siswa.update', $siswa->id) }}" method="POST" class="col-lg-8" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="mb-3">
@@ -63,10 +63,52 @@
                 <input type="text" class="form-control" name="nomor_telepon" required
                     value="{{ $siswa->nomor_telepon }}">
             </div>
+            
+            <div class="mb-3">
+                <label for="image" class="form-label">Foto Siswa</label>
+                <input type="hidden" name="oldImage" value="{{ $siswa->image }}">
+
+                @if ($siswa->image)
+
+                <img src="{{ asset('storage/' . $siswa->image) }}" class="img-preview img-fluid mb-3 col-sm-3 d-block">
+
+                @else
+
+                <img class="img-preview img-fluid mb-3 col-sm-3 d-block">
+                @endif
+                <img class="img-preview img-fluid mb-3 col-sm-3">
+                <input class="form-control @error('image')
+                is-invalid
+            @enderror" type="file"
+                    id="image" name="image" onchange="previewImage()" value="{{ old('image') }}">
+                @error('image')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+            <div>
+
             <div>
                 <button type="submit" class="btn btn-success">OK</button>
             </div>
         </form>
     </div>
     <script src="{{ '/' }}js/app.js"></script>
+    <!-- Preview Image -->
+    <script>
+        function previewImage() {
+            const image = document.querySelector('#image');
+            const imgPreview = document.querySelector('.img-preview');
+
+            imgPreview.style.display = 'block';
+
+            const oFReader = new FileReader();
+            oFReader.readAsDataURL(image.files[0]);
+
+            oFReader.onload = function(ofREvent) {
+                imgPreview.src = ofREvent.target.result;
+            }
+        }
+    </script>
 @endsection

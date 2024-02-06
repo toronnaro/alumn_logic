@@ -113,11 +113,12 @@
                 @enderror
             </div>
             <div class="mb-3">
-                <label for="formFile" class="form-label">Foto Siswa</label>
+                <label for="image" class="form-label">Foto Siswa</label>
+                <img class="img-preview img-fluid mb-3 col-sm-3">
                 <input class="form-control @error('image')
                 is-invalid
             @enderror" type="file"
-                    id="formFile" name="image" value="{{ old('image') }}">
+                    id="image" name="image" onchange="previewImage()" value="{{ old('image') }}">
                 @error('image')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -130,4 +131,21 @@
         </form>
     </div>
     <script src="{{ '/' }}js/app.js"></script>
+
+    <!-- Preview Image -->
+    <script>
+        function previewImage() {
+            const image = document.querySelector('#image');
+            const imgPreview = document.querySelector('.img-preview');
+
+            imgPreview.style.display = 'block';
+
+            const oFReader = new FileReader();
+            oFReader.readAsDataURL(image.files[0]);
+
+            oFReader.onload = function(ofREvent) {
+                imgPreview.src = ofREvent.target.result;
+            }
+        }
+    </script>
 @endsection
