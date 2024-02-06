@@ -5,6 +5,7 @@ use App\Http\Controllers\GuruController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\RegisterController;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,8 +41,12 @@ Route::get('/tentangsekolah', function () {
 
 // View Credit
 Route::get('/credit', function () {
-    return view('dashboard.credit');
+    return view('dashboard.credit', [
+        'users' => User::all()
+    ]);
 });
+// ->middleware('admin');
+
 
 // Register - Create User
 Route::post('/register', [RegisterController::class, 'store'])->name('register');
