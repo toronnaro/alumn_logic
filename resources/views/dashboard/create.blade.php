@@ -74,7 +74,7 @@
             </div>
             <div class="mb-3">
                 <label for="tahun_masuk">Tahun Masuk</label>
-                <input type="text" class="form-control @error('tahun-masuk') is-invalid @enderror" name="tahun_masuk"
+                <input type="text" class="form-control @error('tahun_masuk') is-invalid @enderror" name="tahun_masuk"
                     value="{{ old('tahun_masuk') }}">
                 @error('tahun_masuk')
                     <div class="invalid-feedback">
@@ -84,7 +84,7 @@
             </div>
             <div class="mb-3">
                 <label for="tahun_keluar">Tahun Keluar</label>
-                <input type="text" class="form-control @error('tahun-keluar') is-invalid @enderror" name="tahun_keluar"
+                <input type="text" class="form-control @error('tahun_keluar') is-invalid @enderror" name="tahun_keluar"
                     value="{{ old('tahun_keluar') }}" required>
                 @error('tahun_masuk')
                     <div class="invalid-feedback">

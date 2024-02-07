@@ -61,7 +61,9 @@ class SiswaController extends Controller
      */
     public function show(Siswa $siswa)
     {
-        //
+        return view('dashboard.show', [
+            'siswa' => $siswa
+        ]);
     }
 
     /**
@@ -96,7 +98,7 @@ class SiswaController extends Controller
         $validatedData = $request->validate($rules);
 
         if ($request->file('image')) {
-             
+
             if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
