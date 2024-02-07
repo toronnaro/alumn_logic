@@ -49,10 +49,10 @@
         <div class="row">
             @foreach ($siswas as $siswa)
                 <div class="col-sm-2 mb-3">
-                    <div class="card width-siswa">
+                    <div class="card width-siswa imagee-container">
                         @if ($siswa->image)
-                            <img src="{{ asset('storage/' . $siswa->image) }}" class="card-img-top"
-                                alt="{{ $siswa->nama }}">
+                            <div class="imagee"><img src="{{ asset('storage/' . $siswa->image) }}" class="card-img-top"
+                                alt="{{ $siswa->nama }}"></div>
                         @else
                             <img src="/img/siswa-unknown.png" class="card-img-top" alt="{{ $siswa->nama }}">
                         @endif
@@ -67,6 +67,10 @@
                             </form>
                             <a class="badge bg-warning border-0 p-2" href="{{ route('siswa.edit', $siswa->id) }}">Edit</a>
                         </div>
+                        <div class="popup-imagee">
+                            <span>&times;</span>
+                            <img src="{{ asset('storage/' . $siswa->image) }}"  alt="{{ $siswa->nama }}">
+                        </div>
                     </div>
                 </div>
             @endforeach
@@ -75,4 +79,16 @@
     {{-- Card End --}}
 
     <script src="js/app.js"></script>
+    <script>
+        document.querySelectorAll('.imagee-container img').forEach(image => {
+         image.onclick = () =>  {
+            document.querySelector('.popup-imagee').style.display = 'block';
+            document.querySelector('.popup-imagee img').src = image.getAttribute('src');
+         }
+        });
+
+        document.querySelector('.popup-imagee span').onclick = () => {
+            document.querySelector('.popup-imagee').style.display = 'none';
+        }
+    </script>
 @endsection
