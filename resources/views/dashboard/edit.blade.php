@@ -75,8 +75,8 @@
             </div>
             <div class="mb-3">
                 <label for="tahun_masuk">Tahun Masuk</label>
-                <input type="text" name="tahun_masuk @error('tahun-masuk') is-invalid @enderror" required
-                    value="{{ $siswa->tahun_masuk }}">
+                <input type="text" name="tahun_masuk" class="form-control @error('tahun_masuk') is-invalid @enderror"
+                    required value="{{ $siswa->tahun_masuk }}">
                 @error('tahun_masuk')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -85,8 +85,8 @@
             </div>
             <div class="mb-3">
                 <label for="tahun_keluar">Tahun Keluar</label>
-                <input type="text" name="tahun_keluar @error('tahun_keluar') is-invalid @enderror" required
-                    value="{{ $siswa->tahun_keluar }}">
+                <input type="text" class="form-control @error('tahun_keluar') is-invalid @enderror" name="tahun_keluar"
+                    required value="{{ $siswa->tahun_keluar }}">
                 @error('tahun_keluar')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -117,7 +117,6 @@
             <div class="mb-3">
                 <label for="image" class="form-label">Foto Siswa</label>
                 <input type="hidden" name="oldImage" value="{{ $siswa->image }}">
-
                 @if ($siswa->image)
                     <img src="{{ asset('storage/' . $siswa->image) }}" class="img-preview img-fluid mb-3 col-sm-3 d-block">
                 @else

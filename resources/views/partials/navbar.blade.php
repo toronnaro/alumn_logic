@@ -7,12 +7,8 @@
         <h3 class="hide">ALUMNI SMKIT IQIS</h3>
     </div>
 
-    <div class="search">
-        <i class='bx bx-search'></i>
-        <input type="text" class="hide" placeholder="Quick Search ...">
-    </div>
     <div class="underline3"><span></span></div>
-    <div class="sidebar-links">
+    <div class="sidebar-links mt-3">
         <ul>
             <li class="tooltip-element" id="Tab">
                 <a href="/">

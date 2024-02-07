@@ -24,7 +24,11 @@ class SiswaController extends Controller
      */
     public function create()
     {
-        return view('dashboard.create');
+        if (!auth()->check() || !auth()->user()->is_admin) {
+            abort(403);
+        } else {
+            return view('dashboard.create');
+        }
     }
 
     /**
@@ -36,13 +40,13 @@ class SiswaController extends Controller
             'nama' => 'required',
             'gender' => 'required',
             'birthplace' => 'required',
-            'nis' => 'required|min:3|max:11',
-            'nisn' => 'required|min:3|max:11',
+            'nis' => 'required|regex:/^[0-9]+$/|min:3|max:11',
+            'nisn' => 'required|regex:/^[0-9]+$/|min:3|max:11',
             'jurusan' => 'required',
             'tahun_masuk' => 'required|digits:4',
             'tahun_keluar' => 'required|digits:4',
             'status' => 'required',
-            'nomor_telepon' => 'required|min:3|max:13',
+            'nomor_telepon' => 'required|min:3|regex:/^[0-9]+$/|max:13',
             'image' => 'image|file|max:2048'
         ]);
 
@@ -71,9 +75,14 @@ class SiswaController extends Controller
      */
     public function edit(Siswa $siswa)
     {
-        return view('dashboard.edit', [
-            'siswa' => $siswa
-        ]);
+
+        if (!auth()->check() || !auth()->user()->is_admin) {
+            abort(403);
+        } else {
+            return view('dashboard.edit', [
+                'siswa' => $siswa
+            ]);
+        }
     }
 
     /**
@@ -85,20 +94,19 @@ class SiswaController extends Controller
             'nama' => 'required',
             'gender' => 'required',
             'birthplace' => 'required',
-            'nis' => 'required|min:3|max:11',
-            'nisn' => 'required|min:3|max:11',
+            'nis' => 'required|regex:/^[0-9]+$/|min:3|max:11',
+            'nisn' => 'required|regex:/^[0-9]+$/|min:3|max:11',
             'jurusan' => 'required',
             'tahun_masuk' => 'required|digits:4',
             'tahun_keluar' => 'required|digits:4',
             'status' => 'required',
-            'nomor_telepon' => 'required|min:3|max:13',
+            'nomor_telepon' => 'required|regex:/^[0-9]+$/|min:3|max:13',
             'image' => 'image|file|max:2048'
         ];
 
         $validatedData = $request->validate($rules);
 
         if ($request->file('image')) {
-
             if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
@@ -115,7 +123,6 @@ class SiswaController extends Controller
      */
     public function destroy(Siswa $siswa)
     {
-
         if ($siswa->image) {
             Storage::delete($siswa->image);
         }
