@@ -4,7 +4,9 @@
     <link rel="stylesheet" href="{{ '/' }}css/dashboard.css">
 
     <h1 class="mb-3 text-center ">Data Alumni</h1>
-    <a href="{{ route('siswa.create') }}" class="btn btn-success mb-3 ms-3">Tambah</a>
+    @can('admin')
+        <a href="{{ route('siswa.create') }}" class="btn btn-success mb-3 ms-3">Tambah</a>
+    @endcan
     {{-- Tabel Start --}}
     @can('admin')
         <table class="table table-hover text-center">
@@ -47,10 +49,10 @@
 
 
     {{-- Card Start --}}
-    <div class="container">
-        <div class="row">
+    <div class="container ">
+        <div class="row ">
             @foreach ($siswas as $siswa)
-                <div class="col-sm-2 mb-3">
+                <div class="col-sm-3 mb-5">
                     <div class="card width-siswa">
                         @if ($siswa->image)
                             <img src="{{ asset('storage/' . $siswa->image) }}" class="card-img-top"
@@ -61,13 +63,17 @@
                         <div class="card-body">
                             <h6 class="card-title">{{ $siswa->nama }}</h6>
                             <p class="card-text">{{ $siswa->jurusan }}</p>
-                            <form action="/siswa/{{ $siswa->id }}" class="d-inline" method="post">
-                                @csrf
-                                @method('DELETE')
-                                <button class="badge bg-danger border-0 p-2"
-                                    onclick="return confirm('Anda yakin ingin menghapusnya?')">Del</button>
-                            </form>
-                            <a class="badge bg-warning border-0 p-2" href="{{ route('siswa.edit', $siswa->id) }}">Edit</a>
+
+                            <a class="badge bg-primary border-0 p-2" href="/siswa/{{ $siswa->id }}">Show More</a>
+                            @can('admin')
+                                <form action="/siswa/{{ $siswa->id }}" class="d-inline" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="badge bg-danger border-0 p-2"
+                                        onclick="return confirm('Anda yakin ingin menghapusnya?')">Del</button>
+                                </form>
+                                <a class="badge bg-warning border-0 p-2" href="{{ route('siswa.edit', $siswa->id) }}">Edit</a>
+                            @endcan
                         </div>
                     </div>
                 </div>
