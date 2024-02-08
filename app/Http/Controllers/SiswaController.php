@@ -57,7 +57,7 @@ class SiswaController extends Controller
 
         Siswa::create($validatedData);
 
-        return redirect()->route('siswa.index');
+        return redirect()->route('siswa.index')->with('success', 'Data Siswa Telah Ditambah!');
     }
 
     /**
@@ -115,7 +115,7 @@ class SiswaController extends Controller
 
         Siswa::where('id', $siswa->id)->update($validatedData);
 
-        return redirect()->route('siswa.index');
+        return redirect()->route('siswa.index')->with('success', 'Data Siswa Telah Diubah!');
     }
 
     /**
@@ -129,6 +129,6 @@ class SiswaController extends Controller
 
         Siswa::destroy($siswa->id);
 
-        return redirect()->route('siswa.index');
+        return redirect()->route('siswa.index')->with('delete', 'Data Siswa Telah Dihapus!');
     }
 }
