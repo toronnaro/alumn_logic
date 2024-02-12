@@ -31,7 +31,7 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('/');
+            return redirect()->intended('/main');
         }
 
         // If Login is Failed, Back To First View (Login View)
@@ -47,6 +47,6 @@ class LoginController extends Controller
 
         request()->session()->regenerateToken();
 
-        return redirect('/login');
+        return redirect('/');
     }
 }

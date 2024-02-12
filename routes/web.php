@@ -25,7 +25,7 @@ Route::resource('siswa', SiswaController::class)->middleware('auth');
 Route::resource('guru', GuruController::class)->middleware('auth');
 
 // Dashboard View
-Route::get('/', function () {
+Route::get('/main', function () {
     return view('dashboard.main');
 })->middleware('auth');
 
@@ -60,3 +60,8 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 
 // Logout
 Route::post('/logout', [LoginController::class, 'logout']);
+
+// Landing Page
+Route::get('/', function (){
+    return view('landing.landing-page');
+});
