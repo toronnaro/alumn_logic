@@ -25,9 +25,9 @@
     <a href="#" class="navbar-logo">SMKIT<span> IQIS</span></a>
 
     <div class="navbar-nav">
-      <a href="#home">Beranda</a>
-      <a href="#about">Tentang Kami</a>
-      <a href="#students">Siswa</a>
+      <a href="#home">Home</a>
+      <a href="#about">Tentang</a>
+      <a href="#students">Murid</a>
       <a href="#contact">Sosial Media</a>
     </div>
 
@@ -64,7 +64,7 @@
       <div class="content">
         <h3>Alumni Angkatan Pertama</h3>
         <p>
-          Kami adalah siswa-siswa angkatan pertama dari sekolah SMKIT Ibnul Qayyim Makassar.
+          Kami adalah murid-murid alumni dari angkatan pertama sekolah SMKIT Ibnul Qayyim Makassar.
         </p>
         <p>
           Disini kami mempelajari tentang Pemrograman Web & Perangkat Bergerak, Pemrograman Berorientasi Objek,
@@ -80,56 +80,58 @@
   <section id="students" class="menu">
     <h2><span>Pelajar</span> Kami</h2>
     <p>
-      Siswa Angkatan Pertama
+      Pelajar Angkatan Pertama
     </p>
 
     <div class="row">
       <div class="menu-card">
-        <img src="img/menu/1.jpg" alt="Espresso" class="menu-card-img" />
-        <h3 class="menu-card-title">- Espresso -</h3>
-        <p class="menu-card-price">IDR 15K</p>
+        <img src="img/1.png" alt="Espresso" class="menu-card-img" />
+        <h3 class="menu-card-title">- A. Riyadh Madani Afif -</h3>
+        <p class="menu-card-price">Riyadh</p>
       </div>
       <div class="menu-card">
-        <img src="img/menu/1.jpg" alt="Espresso" class="menu-card-img" />
-        <h3 class="menu-card-title">- Espresso -</h3>
-        <p class="menu-card-price">IDR 15K</p>
+        <img src="img/2.png" alt="Espresso" class="menu-card-img" />
+        <h3 class="menu-card-title">- Andi Rasyihan Jawahir -</h3>
+        <p class="menu-card-price">Aan</p>
       </div>
       <div class="menu-card">
-        <img src="img/menu/1.jpg" alt="Espresso" class="menu-card-img" />
-        <h3 class="menu-card-title">- Espresso -</h3>
-        <p class="menu-card-price">IDR 15K</p>
-      </div>
-      <div class="menu-card">
-        <img src="img/menu/Ibe.jpeg" alt="Espresso" class="menu-card-img" />
-        <h3 class="menu-card-title">- Muhammad Ibnu Hidayat-</h3>
-        <p class="menu-card-price">Ibe</p>
+        <img src="img/3.png" alt="Espresso" class="menu-card-img" />
+        <h3 class="menu-card-title">- Athallah Yao Zevaskye -</h3>
+        <p class="menu-card-price">Yao</p>
       </div>
     </div>
     <div class="row">
       <div class="menu-card">
-        <img src="img/menu/1.jpg" alt="Espresso" class="menu-card-img" />
-        <h3 class="menu-card-title">- Espresso -</h3>
-        <p class="menu-card-price">IDR 15K</p>
+        <img src="img/4.png" alt="Espresso" class="menu-card-img" />
+        <h3 class="menu-card-title">- Muhammad Ibnu Hidayat-</h3>
+        <p class="menu-card-price">Ibe</p>
       </div>
       <div class="menu-card">
-        <img src="img/menu/1.jpg" alt="Espresso" class="menu-card-img" />
-        <h3 class="menu-card-title">- Espresso -</h3>
-        <p class="menu-card-price">IDR 15K</p>
+        <img src="img/9.png" alt="Espresso" class="menu-card-img" />
+        <h3 class="menu-card-title">- Muhammad Arfanda Agung Pramulya -</h3>
+        <p class="menu-card-price">Agung</p>
       </div>
       <div class="menu-card">
-        <img src="img/menu/1.jpg" alt="Espresso" class="menu-card-img" />
-        <h3 class="menu-card-title">- Espresso -</h3>
-        <p class="menu-card-price">IDR 15K</p>
+        <img src="img/5.png" alt="Espresso" class="menu-card-img" />
+        <h3 class="menu-card-title">- Muhammad Hafizh Az-Zuhri -</h3>
+        <p class="menu-card-price">Hafizh</p>
+      </div>
+    </div>
+      <div class="row">
+      <div class="menu-card">
+        <img src="img/6.png" alt="Espresso" class="menu-card-img" />
+        <h3 class="menu-card-title">- Muhammad Syahrul Ramadhan -</h3>
+        <p class="menu-card-price">Arul</p>
       </div>
       <div class="menu-card">
-        <img src="img/menu/1.jpg" alt="Espresso" class="menu-card-img" />
-        <h3 class="menu-card-title">- Espresso -</h3>
-        <p class="menu-card-price">IDR 15K</p>
+        <img src="img/7.png" alt="Espresso" class="menu-card-img" />
+        <h3 class="menu-card-title">- Rijal Ammardzaki Toto -</h3>
+        <p class="menu-card-price">Rijal</p>
       </div>
       <div class="menu-card">
-        <img src="img/menu/1.jpg" alt="Espresso" class="menu-card-img" />
-        <h3 class="menu-card-title">- Espresso -</h3>
-        <p class="menu-card-price">IDR 15K</p>
+        <img src="img/8.png" alt="Espresso" class="menu-card-img" />
+        <h3 class="menu-card-title">- Abdullah Ahmad Izzah -</h3>
+        <p class="menu-card-price">Izzah</p>
       </div>
     </div>
   </section>
@@ -139,7 +141,7 @@
   <section id="contact" class="contact">
     <h2><span>Kontak</span> Kami</h2>
     <p>
-      Silahkan kontak kami jika ingin memberikan pendapat!
+      Silahkan menghubungi kami jika ada hal yang ingin ditanyakan !
     </p>
 
     <div class="row">
@@ -158,9 +160,13 @@
         </div>
         <div class="input-group">
           <i data-feather="phone"></i>
-          <input type="text" placeholder="Nomor Hp" />
+          <input type="text" placeholder="Nomor Telepon" />
         </div>
-        <button type="submit" class="btn">Kirim Pesan</button>
+        <div class="input-group">
+          <i data-feather="phone"></i>
+          <input type="text" placeholder="Cita-Cita" />
+        </div>
+        <button type="submit" class="btn">Tekan Ini !</button>
       </form>
     </div>
   </section>
@@ -172,6 +178,7 @@
       <a href="#"><i data-feather="instagram"></i></a>
       <a href="#"><i data-feather="twitter"></i></a>
       <a href="#"><i data-feather="facebook"></i></a>
+      <a href="#"><i data-feather="youtube"></i></a>
     </div>
 
     <div class="links">
@@ -182,7 +189,7 @@
     </div>
 
     <div class="credit">
-      <p>Created By <a href=""> IbnuHidayat</a>. | 2023</p>
+      <p>Created By ANGKATAN 01<a href=""> </a>. | 2024</p>
     </div>
   </footer>
 
