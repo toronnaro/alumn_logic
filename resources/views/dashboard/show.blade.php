@@ -2,7 +2,7 @@
 
 @section('container')
     <link rel="stylesheet" href="{{ '/' }}css/dashboard.css">
-    <h1 class="ms-5">Data Siswa</h1>
+    <h1 class="ms-5 fw-bold">Data Siswa</h1>
 
     <a class="btn btn-primary mt-2 mb-1 ms-5" href="/siswa"><i class='bx bx-arrow-back'></i></a>
 

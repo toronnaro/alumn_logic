@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{ '/' }}css/dashboard.css">
 
     <main>
-        <h1>About IQIS</h1>
+        <h1 class="fw-bold">About IQIS</h1>
          {{-- maps iqis --}}
             <iframe
             width="500" 
