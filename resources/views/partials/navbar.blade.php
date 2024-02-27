@@ -11,7 +11,7 @@
     <div class="sidebar-links mt-3">
         <ul>
             <li class="tooltip-element" id="Tab">
-                <a href="/">
+                <a href="/main">
                     <div class="icon">
                         <i class='bx bx-tachometer'></i>
                         <i class='bx bxs-tachometer'></i>
