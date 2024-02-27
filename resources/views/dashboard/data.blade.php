@@ -66,7 +66,7 @@
         }
     </style>
 
-    <h1 class="mb-3 text-center ">Data Alumni</h1>
+    <h1 class="mb-3 text-center fw-bold">Data Alumni</h1>
 
     @if (session()->has('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">

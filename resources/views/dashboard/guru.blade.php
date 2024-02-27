@@ -2,7 +2,7 @@
 
 @section('container')
     <link rel="stylesheet" href="{{ '/' }}css/dashboard.css">
-    <h1 class="text-center">Data Guru</h1>
+    <h1 class="text-center fw-bold">Data Guru</h1>
 
     <table class="table table-hover text-center">
         <thead>

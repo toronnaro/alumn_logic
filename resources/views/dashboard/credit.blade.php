@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{ '/' }}css/dashboard.css">
 
     <div class="container">
-        <h1>All Users</h1>
+        <h1 class="fw-bold">All Users</h1>
         <div class="table-responsive col-lg-7 mt-3">
             <table class="table table-hover">
                 <thead>
